@@ -56,6 +56,7 @@ router.put('/:id', (req, res) => {
     // expects user information
 
     User.update(req.body, {
+        individualHooks: true,
         where: {
             id: req.params.id
         }
